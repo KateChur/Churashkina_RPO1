@@ -1,0 +1,11 @@
+# Hashes of file build rules.
+b15e04772860f67998850616750b83d3 CMakeFiles/apidoc
+dc3cc018ef77a99baf788bc0b540f2f9 library/CMakeFiles/lib
+e1ac5e7a76777beaf6b5e026d5856ef0 library/error.c
+2719b6f4ce4491577b3dfa10ffba0aa4 library/psa_crypto_driver_wrappers.c
+0ed94125d4f09dbd4e2982a58151697a library/ssl_debug_helpers_generated.c
+98afd1e1d8f857d6c4b1dbf7a757d128 library/version_features.c
+d7be199b8c9b1d52355a72ad470ca9ff programs/psa/CMakeFiles/generate_psa_constant_names_generated_c
+f4c3e5ccc15c140b39341e3dfa61d852 programs/psa/psa_constant_names_generated.c
+58eff8797ef94e698daa68eff20eee30 programs/test/CMakeFiles/generate_query_config_c
+9db82d0fd25fcf8f031e5ae56c450490 programs/test/query_config.c
