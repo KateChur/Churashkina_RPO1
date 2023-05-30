@@ -10,8 +10,6 @@ public class SampleController {
 
     @GetMapping("/title")
     public String getTitle() {
-
-        return "<title>Hello I'm Alina </title>";
+        return "<title>Hello from Back-end</title>";
     }
 }
-

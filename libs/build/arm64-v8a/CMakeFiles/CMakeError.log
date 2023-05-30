@@ -1,0 +1,73 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_828ae/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_828ae.dir/build.make CMakeFiles/cmTC_828ae.dir/build
+gmake[1]: вход в каталог «/home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_828ae.dir/src.cxx.o
+/home/nik/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --sysroot=/home/nik/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -DSPDLOG_COMPILED_LIB  -O2 -g -DNDEBUG -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_828ae.dir/src.cxx.o -MF CMakeFiles/cmTC_828ae.dir/src.cxx.o.d -o CMakeFiles/cmTC_828ae.dir/src.cxx.o -c /home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CMakeTmp/src.cxx
+/home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CMakeTmp/src.cxx:13:3: error: use of undeclared identifier 'pthread_cancel'
+  pthread_cancel(thread);
+  ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_828ae.dir/build.make:79: CMakeFiles/cmTC_828ae.dir/src.cxx.o] Ошибка 1
+gmake[1]: выход из каталога «/home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CMakeTmp»
+gmake: *** [Makefile:127: cmTC_828ae/fast] Ошибка 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0f562/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0f562.dir/build.make CMakeFiles/cmTC_0f562.dir/build
+gmake[1]: вход в каталог «/home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_0f562.dir/CheckFunctionExists.cxx.o
+/home/nik/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --sysroot=/home/nik/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_0f562.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_0f562.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_0f562.dir/CheckFunctionExists.cxx.o -c /home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_0f562
+/home/nik/Android/Sdk/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f562.dir/link.txt --verbose=1
+/home/nik/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --sysroot=/home/nik/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections  CMakeFiles/cmTC_0f562.dir/CheckFunctionExists.cxx.o -o cmTC_0f562  -lpthreads  -static-libstdc++ -latomic -lm 
+ld: error: unable to find library -lpthreads
+clang-12: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_0f562.dir/build.make:100: cmTC_0f562] Ошибка 1
+gmake[1]: выход из каталога «/home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CMakeTmp»
+gmake: *** [Makefile:127: cmTC_0f562/fast] Ошибка 2
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: /home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_19c16/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_19c16.dir/build.make CMakeFiles/cmTC_19c16.dir/build
+gmake[1]: вход в каталог «/home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_19c16.dir/CheckFunctionExists.cxx.o
+/home/nik/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --sysroot=/home/nik/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_19c16.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_19c16.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_19c16.dir/CheckFunctionExists.cxx.o -c /home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_19c16
+/home/nik/Android/Sdk/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19c16.dir/link.txt --verbose=1
+/home/nik/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --sysroot=/home/nik/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections  CMakeFiles/cmTC_19c16.dir/CheckFunctionExists.cxx.o -o cmTC_19c16  -lpthread  -static-libstdc++ -latomic -lm 
+ld: error: unable to find library -lpthread
+clang-12: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_19c16.dir/build.make:100: cmTC_19c16] Ошибка 1
+gmake[1]: выход из каталога «/home/nik/AndroidStudioProjects/libs/build/arm64-v8a/CMakeFiles/CMakeTmp»
+gmake: *** [Makefile:127: cmTC_19c16/fast] Ошибка 2
+
+
+

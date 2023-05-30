@@ -1,8 +1,8 @@
-# Install script for directory: /home/user/Projects/RPO/libs/mbedtls/mbedtls/programs
+# Install script for directory: C:/Users/Reginleif/Desktop/knowledge_base/labs_tasks/rpo-baltin-2021/libs/mbedtls/mbedtls/programs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/mbed TLS")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,7 +29,7 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
+  set(CMAKE_INSTALL_SO_NO_EXE "0")
 endif()
 
 # Is this installation the result of a crosscompile?
@@ -37,24 +37,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "TRUE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-objdump")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/user/Projects/RPO/libs/mbedtls/build/x86_64/programs/aes/cmake_install.cmake")
-  include("/home/user/Projects/RPO/libs/mbedtls/build/x86_64/programs/cipher/cmake_install.cmake")
-  include("/home/user/Projects/RPO/libs/mbedtls/build/x86_64/programs/fuzz/cmake_install.cmake")
-  include("/home/user/Projects/RPO/libs/mbedtls/build/x86_64/programs/hash/cmake_install.cmake")
-  include("/home/user/Projects/RPO/libs/mbedtls/build/x86_64/programs/pkey/cmake_install.cmake")
-  include("/home/user/Projects/RPO/libs/mbedtls/build/x86_64/programs/psa/cmake_install.cmake")
-  include("/home/user/Projects/RPO/libs/mbedtls/build/x86_64/programs/random/cmake_install.cmake")
-  include("/home/user/Projects/RPO/libs/mbedtls/build/x86_64/programs/ssl/cmake_install.cmake")
-  include("/home/user/Projects/RPO/libs/mbedtls/build/x86_64/programs/test/cmake_install.cmake")
-  include("/home/user/Projects/RPO/libs/mbedtls/build/x86_64/programs/util/cmake_install.cmake")
-  include("/home/user/Projects/RPO/libs/mbedtls/build/x86_64/programs/x509/cmake_install.cmake")
+  include("C:/Users/Reginleif/Desktop/knowledge_base/labs_tasks/rpo-baltin-2021/libs/mbedtls/build/x86_64/programs/aes/cmake_install.cmake")
+  include("C:/Users/Reginleif/Desktop/knowledge_base/labs_tasks/rpo-baltin-2021/libs/mbedtls/build/x86_64/programs/fuzz/cmake_install.cmake")
+  include("C:/Users/Reginleif/Desktop/knowledge_base/labs_tasks/rpo-baltin-2021/libs/mbedtls/build/x86_64/programs/hash/cmake_install.cmake")
+  include("C:/Users/Reginleif/Desktop/knowledge_base/labs_tasks/rpo-baltin-2021/libs/mbedtls/build/x86_64/programs/pkey/cmake_install.cmake")
+  include("C:/Users/Reginleif/Desktop/knowledge_base/labs_tasks/rpo-baltin-2021/libs/mbedtls/build/x86_64/programs/psa/cmake_install.cmake")
+  include("C:/Users/Reginleif/Desktop/knowledge_base/labs_tasks/rpo-baltin-2021/libs/mbedtls/build/x86_64/programs/random/cmake_install.cmake")
+  include("C:/Users/Reginleif/Desktop/knowledge_base/labs_tasks/rpo-baltin-2021/libs/mbedtls/build/x86_64/programs/ssl/cmake_install.cmake")
+  include("C:/Users/Reginleif/Desktop/knowledge_base/labs_tasks/rpo-baltin-2021/libs/mbedtls/build/x86_64/programs/test/cmake_install.cmake")
+  include("C:/Users/Reginleif/Desktop/knowledge_base/labs_tasks/rpo-baltin-2021/libs/mbedtls/build/x86_64/programs/util/cmake_install.cmake")
+  include("C:/Users/Reginleif/Desktop/knowledge_base/labs_tasks/rpo-baltin-2021/libs/mbedtls/build/x86_64/programs/x509/cmake_install.cmake")
 
 endif()
 
